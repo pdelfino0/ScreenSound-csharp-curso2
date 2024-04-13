@@ -1,14 +1,14 @@
-﻿Musica musica1 = new Musica();
-musica1.nome = "Roxane";
-musica1.artista = "The Police";
-musica1.duracao = 273;
-musica1.disponivel = true;
+﻿Album albumDoDrake = new Album();
+albumDoDrake.Nome = "Certified Lover Boy";
+Musica musica1 = new Musica();
+musica1.Nome = "Champagne Poetry";
+musica1.Duracao = 260;
 
 Musica musica2 = new Musica();
-musica2.nome = "Vertigo";
-musica2.artista = "U2";
-musica2.duracao = 367;
-musica2.disponivel = false;
+musica2.Nome = "Papi's Home";
+musica2.Duracao = 300;
 
-musica1.ExibirFichaTecnica();
-musica2.ExibirFichaTecnica();
+albumDoDrake.AdicionarMusica(musica1);
+albumDoDrake.AdicionarMusica(musica2);
+
+albumDoDrake.ExibirMusicas();
