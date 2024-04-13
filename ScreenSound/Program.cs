@@ -1,14 +1,24 @@
-﻿Album albumDoDrake = new Album();
-albumDoDrake.Nome = "Certified Lover Boy";
-Musica musica1 = new Musica();
-musica1.Nome = "Champagne Poetry";
-musica1.Duracao = 260;
+﻿Artista artista = new Artista("Drake");
+Album albumDoDrake = new Album("Certified Lover Boy");
 
-Musica musica2 = new Musica();
-musica2.Nome = "Papi's Home";
-musica2.Duracao = 300;
+Musica musica1 = new Musica(artista, "Champagne Poetry")
+{
+    Duracao = 250,
+    Disponivel = true
+};
+
+
+Musica musica2 = new Musica(artista, "Papi's Home")
+{
+    Duracao = 300,
+    Disponivel = false
+};
+
+musica1.ExibirFichaTecnica();
+musica2.ExibirFichaTecnica();
 
 albumDoDrake.AdicionarMusica(musica1);
 albumDoDrake.AdicionarMusica(musica2);
+artista.AdicionarAlbum(albumDoDrake);
 
-albumDoDrake.ExibirMusicas();
+artista.ExibirDiscografia();
