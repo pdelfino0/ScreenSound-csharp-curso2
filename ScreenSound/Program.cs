@@ -22,3 +22,16 @@ albumDoDrake.AdicionarMusica(musica2);
 artista.AdicionarAlbum(albumDoDrake);
 
 artista.ExibirDiscografia();
+
+Console.WriteLine("\n\n");
+Podcast podcast = new Podcast("DelfinoCast", "Delfino");
+
+Episodio episodio1 = new Episodio(60, 1, "Delfino convida o Drake para o podcast");
+episodio1.AdicionarConvidado("Drake");
+Episodio episodio2 = new Episodio(60, 2, "Delfino convida o Kanye West para o podcast");
+episodio2.AdicionarConvidado("Kanye West");
+
+podcast.AdicionarEpisodio(episodio1);
+podcast.AdicionarEpisodio(episodio2);
+
+podcast.ExibirDetalhes();
